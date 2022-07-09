@@ -34,4 +34,6 @@ reports:
   params: reports/params.json
   scores: reports/scores.json
 
-# webapp_model_dir: prediction_service/model/model.joblib
+webapp_model: saved_models/rfc_model.pkl
+scaler: saved_artifacts/std_scaler.pkl
+label_encoder: saved_artifacts/label_encoder.pkl
