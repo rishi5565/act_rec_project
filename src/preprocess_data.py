@@ -1,8 +1,10 @@
 
-from data_preprocess.preprocess import preprocess_data
+from preprocess_functions import preprocess_data
 from functions import read_params
 from logger.myLogger import getmylogger
 import argparse
+from sklearn.model_selection import train_test_split
+
 
 logger = getmylogger(__name__)
 
@@ -16,7 +18,22 @@ def preprocess_dataset(config_path):
     data_to_prp.remove_useless_cols(cols_to_remove)
     data_to_prp.label_encode(target_col, artifact_dir)
     data_to_prp.standard_scale(target_col, artifact_dir)
-    print(data_to_prp.df.head())
+    logger.info("Pre-processing of raw data successful!!")
+    return data_to_prp.df
+
+def split_and_save_data(config_path):
+    config = read_params(config_path)
+    test_data_path = config["split_data"]["test_path"]
+    train_data_path = config["split_data"]["train_path"]
+    split_ratio = config["split_data"]["test_size"]
+    random_state = config["base"]["random_state"]
+
+    df = preprocess_dataset(config_path)
+    train, test = train_test_split(df, test_size=split_ratio, random_state=random_state)
+
+    train.to_csv(train_data_path, index=False)
+    test.to_csv(test_data_path, index=False)
+    logger.info("Saved training and testing sets!")
 
 
 
@@ -24,4 +41,4 @@ if __name__=="__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config", default="params.yaml")
     parsed_args = args.parse_args()
-    preprocess_data(config_path=parsed_args.config)
+    split_and_save_data(config_path=parsed_args.config)

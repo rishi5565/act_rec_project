@@ -36,3 +36,37 @@
 2022-07-09 17:38:41,051~INFO~Removed irrelevant columns!
 2022-07-09 17:38:41,057~INFO~Dumped label encoder pickle file!
 2022-07-09 17:38:41,070~INFO~Dumped standard scaler pickle file!
+2022-07-09 17:56:59,994~INFO~85 files were successfully validated!
+2022-07-09 17:56:59,994~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 17:57:00,417~INFO~Created the master raw dataset!
+2022-07-09 17:57:28,990~INFO~85 files were successfully validated!
+2022-07-09 17:57:28,991~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 17:57:29,390~INFO~Created the master raw dataset!
+2022-07-09 17:58:26,045~INFO~85 files were successfully validated!
+2022-07-09 17:58:26,045~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 17:58:26,438~INFO~Created the master raw dataset!
+2022-07-09 18:32:05,174~INFO~Removed irrelevant columns!
+2022-07-09 18:32:05,183~INFO~Dumped label encoder pickle file!
+2022-07-09 18:32:05,199~INFO~Dumped standard scaler pickle file!
+2022-07-09 18:33:33,967~DEBUG~Removed irrelevant columns!
+2022-07-09 18:33:33,976~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:33:33,992~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:34:04,754~DEBUG~Removed irrelevant columns!
+2022-07-09 18:34:04,759~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:34:04,770~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:34:04,770~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:40:25,922~DEBUG~Removed irrelevant columns!
+2022-07-09 18:40:25,927~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:40:25,935~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:40:25,936~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:41:38,394~DEBUG~Removed irrelevant columns!
+2022-07-09 18:41:38,399~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:41:38,408~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:41:38,410~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:41:38,414~INFO~Train test split successful!
+2022-07-09 18:41:38,701~INFO~Saved training and testing sets!
+2022-07-09 18:41:53,348~DEBUG~Removed irrelevant columns!
+2022-07-09 18:41:53,353~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:41:53,361~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:41:53,361~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:41:53,631~INFO~Saved training and testing sets!

@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.model_selection import train_test_split
 import pickle
 import os
 from logger.myLogger import getmylogger
@@ -17,7 +16,7 @@ class preprocess_data:
 
     def remove_useless_cols(self, cols_to_remove):
         self.df.drop(cols_to_remove, axis=1, inplace=True)
-        logger.info("Removed irrelevant columns!")
+        logger.debug("Removed irrelevant columns!")
 
 
 
@@ -29,7 +28,7 @@ class preprocess_data:
             os.mkdir(artifact_dir)
         with open(os.path.join(artifact_dir, "label_encoder.pkl"), "wb") as f:
             pickle.dump(self.label_encoder, f)
-        logger.info("Dumped label encoder pickle file!")
+        logger.debug("Dumped label encoder pickle file!")
 
 
     def standard_scale(self, target_col, artifact_dir):
@@ -42,4 +41,4 @@ class preprocess_data:
             os.mkdir(artifact_dir)
         with open(os.path.join(artifact_dir, "std_scaler.pkl"), "wb") as f:
             pickle.dump(self.std_scaler, f)
-        logger.info("Dumped standard scaler pickle file!")
+        logger.debug("Dumped standard scaler pickle file!")

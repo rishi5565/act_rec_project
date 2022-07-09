@@ -17,6 +17,7 @@ stages:
     - data/raw/master_dataset.csv
     - logger/myLogger.py
     - src/functions.py
+    - src/preprocess_functions.py
     outs:
     - saved_artifacts/std_scaler.pkl
     - saved_artifacts/label_encoder.pkl
