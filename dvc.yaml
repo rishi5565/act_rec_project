@@ -1,0 +1,12 @@
+stages:
+  validate_and_save_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - src/load_data.py
+    - src/functions.py
+    - data_validation/validate_data.py
+    - logger/myLogger.py
+    - data/external/
+    outs:
+    - data/raw/master_dataset.csv
+

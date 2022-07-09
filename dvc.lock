@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  validate_and_save_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data/external/
+      md5: 70c0e80fcad998278685af45d42a292b.dir
+      size: 1652476
+      nfiles: 88
+    - path: data_validation/validate_data.py
+      md5: ede27c408ea3705f9204a9af64e3038c
+      size: 2220
+    - path: logger/myLogger.py
+      md5: 961c81f55fc6e970cb9c246f718eed46
+      size: 669
+    - path: src/functions.py
+      md5: 75c3d71b43a43d952394beb377388b28
+      size: 182
+    - path: src/load_data.py
+      md5: e1543b65f43716dd73056710030f269f
+      size: 1661
+    outs:
+    - path: data/raw/master_dataset.csv
+      md5: e92812a1f060feb04a3579624a1bc2d4
+      size: 1950912

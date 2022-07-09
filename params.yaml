@@ -1,0 +1,29 @@
+base:
+  project: activity_recognition_project
+  target_col: label
+  random_state: 45
+
+data_source:
+  source_dir: data/external
+
+data_paths:
+  raw_dataset_csv: data/raw/master_dataset.csv
+
+split_data:
+  train_path: data/processed/train_dataset.csv
+  test_path: data/processed/test_dataset.csv
+  test_size: 0.2
+
+estimators:
+  RandomForestClassifier:
+    params:
+      n_estimators: 200
+      criterion: gini
+
+model_dir: models
+
+reports:
+  params: reports/params.json
+  scores: reports/scores.json
+
+# webapp_model_dir: prediction_service/model/model.joblib
