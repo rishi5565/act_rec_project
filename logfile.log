@@ -176,3 +176,11 @@ could not convert string to float:
 could not convert string to float: 
 2022-07-10 00:26:29,560~INFO~Prediction Fetched!
 2022-07-10 00:49:23,182~INFO~Prediction Fetched!
+2022-07-10 00:53:53,461~INFO~Fitting the Random Forest Classifier model......
+2022-07-10 00:53:55,157~INFO~Model fit successful!
+2022-07-10 00:53:55,233~INFO~Accuracy: 79.98%
+2022-07-10 00:53:55,234~INFO~Saved Scores and Parameters in respective json files.
+2022-07-10 00:54:20,497~INFO~Fitting the Random Forest Classifier model......
+2022-07-10 00:54:22,973~INFO~Model fit successful!
+2022-07-10 00:54:23,079~INFO~Accuracy: 80.13%
+2022-07-10 00:54:23,080~INFO~Saved Scores and Parameters in respective json files.

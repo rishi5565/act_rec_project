@@ -74,15 +74,15 @@ stages:
       size: 2711
     params:
       params.yaml:
-        estimators.RandomForestClassifier.params.criterion: gini
-        estimators.RandomForestClassifier.params.n_estimators: 200
+        estimators.RandomForestClassifier.params.criterion: entropy
+        estimators.RandomForestClassifier.params.n_estimators: 75
     outs:
     - path: reports/params.json
-      md5: d4c337a6a01a5c285bd409bbf7bd29cb
-      size: 55
+      md5: 2e6b9054fa582a27958ae9f4edf1a203
+      size: 57
     - path: reports/scores.json
-      md5: 845783f979233820595bea0c5dfe3ced
+      md5: f10510cbf5914d248223640e411b7494
       size: 40
     - path: saved_models/rfc_model.pkl
-      md5: 5606fe21cfbdece5f88855d9d345b1bc
-      size: 253562589
+      md5: 2331334758808b4d926b1dee211f5bf0
+      size: 92898168

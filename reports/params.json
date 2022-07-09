@@ -1,4 +1,4 @@
 {
-    "n_estimators": 200,
-    "criterion": "gini"
+    "n_estimators": 75,
+    "criterion": "entropy"
 }

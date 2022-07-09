@@ -24,8 +24,8 @@ algorithm_name:
 estimators:
   RandomForestClassifier:
     params:
-      n_estimators: 200
-      criterion: gini
+      n_estimators: 75
+      criterion: entropy
 
 artifact_dir: saved_artifacts
 model_dir: saved_models
