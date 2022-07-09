@@ -93,3 +93,22 @@
 2022-07-09 18:58:34,693~DEBUG~Dumped standard scaler pickle file!
 2022-07-09 18:58:34,694~INFO~Pre-processing of raw data successful!!
 2022-07-09 18:58:34,956~INFO~Saved training and testing sets!
+2022-07-09 19:01:29,092~DEBUG~Removed irrelevant columns!
+2022-07-09 19:01:29,099~DEBUG~Dumped label encoder pickle file!
+2022-07-09 19:01:29,110~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 19:01:29,111~INFO~Pre-processing of raw data successful!!
+2022-07-09 19:01:29,328~INFO~Saved training and testing sets!
+2022-07-09 19:48:18,629~INFO~Fitting the Random Forest Classifier model......
+2022-07-09 19:48:24,382~INFO~Model fit successful!
+2022-07-09 19:50:19,229~INFO~Fitting the Random Forest Classifier model......
+2022-07-09 19:50:24,957~INFO~Model fit successful!
+2022-07-09 19:50:25,273~INFO~Accuracy: 80.42%
+2022-07-09 19:50:25,275~INFO~Saved Scores and Parameters json files.
+2022-07-09 20:03:29,145~INFO~Fitting the Random Forest Classifier model......
+2022-07-09 20:03:34,669~INFO~Model fit successful!
+2022-07-09 20:03:34,974~INFO~Accuracy: 80.42%
+2022-07-09 20:03:34,975~INFO~Saved Scores and Parameters in respective json files.
+2022-07-09 20:04:36,930~INFO~Fitting the Random Forest Classifier model......
+2022-07-09 20:04:42,352~INFO~Model fit successful!
+2022-07-09 20:04:42,636~INFO~Accuracy: 80.42%
+2022-07-09 20:04:42,637~INFO~Saved Scores and Parameters in respective json files.

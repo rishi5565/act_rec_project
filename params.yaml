@@ -18,6 +18,9 @@ split_data:
   test_path: data/processed/test_dataset.csv
   test_size: 0.2
 
+algorithm_name: 
+  Random Forest Classifier
+
 estimators:
   RandomForestClassifier:
     params:

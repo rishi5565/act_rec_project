@@ -23,3 +23,66 @@ stages:
     - path: data/raw/master_dataset.csv
       md5: e92812a1f060feb04a3579624a1bc2d4
       size: 1950912
+  preprocess_and_split_data:
+    cmd: python src/preprocess_data.py --config=params.yaml
+    deps:
+    - path: data/raw/master_dataset.csv
+      md5: e92812a1f060feb04a3579624a1bc2d4
+      size: 1950912
+    - path: logger/myLogger.py
+      md5: 961c81f55fc6e970cb9c246f718eed46
+      size: 669
+    - path: src/functions.py
+      md5: 66ecec14856017f37050c30953c0c83e
+      size: 328
+    - path: src/preprocess_data.py
+      md5: 07a476aae061368a6c11df92f482c13a
+      size: 1631
+    - path: src/preprocess_functions.py
+      md5: 58e4e43397e62c9ccf821027d79a39ca
+      size: 1530
+    outs:
+    - path: data/processed/test_dataset.csv
+      md5: 808960c9e13a658f86fb5a62c201bbd3
+      size: 986785
+    - path: data/processed/train_dataset.csv
+      md5: 2d6c24460d4cabfcc1d9e2220fd1d00a
+      size: 3946178
+    - path: saved_artifacts/label_encoder.pkl
+      md5: 6f03253d5c86e2cac228fe55e6ac76ec
+      size: 365
+    - path: saved_artifacts/std_scaler.pkl
+      md5: 455462f7ce75ca9d82b67fa9731ce41d
+      size: 883
+  train_and_evaluate:
+    cmd: python src/train_and_eval.py --config=params.yaml
+    deps:
+    - path: data/processed/test_dataset.csv
+      md5: 808960c9e13a658f86fb5a62c201bbd3
+      size: 986785
+    - path: data/processed/train_dataset.csv
+      md5: 2d6c24460d4cabfcc1d9e2220fd1d00a
+      size: 3946178
+    - path: logger/myLogger.py
+      md5: 961c81f55fc6e970cb9c246f718eed46
+      size: 669
+    - path: src/functions.py
+      md5: 66ecec14856017f37050c30953c0c83e
+      size: 328
+    - path: src/train_and_eval.py
+      md5: 6ec5aa26342e380b38868dccd2313289
+      size: 2733
+    params:
+      params.yaml:
+        estimators.RandomForestClassifier.params.criterion: gini
+        estimators.RandomForestClassifier.params.n_estimators: 200
+    outs:
+    - path: reports/params.json
+      md5: d4c337a6a01a5c285bd409bbf7bd29cb
+      size: 55
+    - path: reports/scores.json
+      md5: 845783f979233820595bea0c5dfe3ced
+      size: 40
+    - path: saved_models/rfc_model.pkl
+      md5: 5606fe21cfbdece5f88855d9d345b1bc
+      size: 253562589

@@ -23,3 +23,23 @@ stages:
     - saved_artifacts/label_encoder.pkl
     - data/processed/train_dataset.csv
     - data/processed/test_dataset.csv
+
+  train_and_evaluate:
+    cmd: python src/train_and_eval.py --config=params.yaml
+    deps:
+    - src/train_and_eval.py
+    - logger/myLogger.py
+    - src/functions.py
+    - data/processed/train_dataset.csv
+    - data/processed/test_dataset.csv
+    params:
+    - estimators.RandomForestClassifier.params.n_estimators
+    - estimators.RandomForestClassifier.params.criterion
+    metrics:
+    - reports/params.json:
+        cache: false
+    - reports/scores.json:
+        cache: false
+    outs:
+    - saved_models/rfc_model.pkl
+
