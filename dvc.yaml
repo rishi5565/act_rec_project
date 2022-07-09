@@ -10,7 +10,7 @@ stages:
     outs:
     - data/raw/master_dataset.csv
 
-  preprocess_data:
+  preprocess_and_split_data:
     cmd: python src/preprocess_data.py --config=params.yaml
     deps:
     - src/preprocess_data.py

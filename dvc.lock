@@ -8,8 +8,8 @@ stages:
       size: 1652476
       nfiles: 88
     - path: data_validation/validate_data.py
-      md5: ede27c408ea3705f9204a9af64e3038c
-      size: 2220
+      md5: 0679c028642fec1e7872c4d0d7984011
+      size: 2191
     - path: logger/myLogger.py
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669

@@ -70,3 +70,16 @@
 2022-07-09 18:41:53,361~DEBUG~Dumped standard scaler pickle file!
 2022-07-09 18:41:53,361~INFO~Pre-processing of raw data successful!!
 2022-07-09 18:41:53,631~INFO~Saved training and testing sets!
+2022-07-09 18:44:57,532~INFO~85 files were successfully validated!
+2022-07-09 18:44:57,533~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 18:44:57,874~INFO~Created the master raw dataset!
+2022-07-09 18:44:59,332~DEBUG~Removed irrelevant columns!
+2022-07-09 18:44:59,339~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:44:59,349~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:44:59,350~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:44:59,597~INFO~Saved training and testing sets!
+2022-07-09 18:50:28,291~DEBUG~Removed irrelevant columns!
+2022-07-09 18:50:28,298~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:50:28,305~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:50:28,305~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:50:28,580~INFO~Saved training and testing sets!
