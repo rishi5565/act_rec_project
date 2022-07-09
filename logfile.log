@@ -83,3 +83,8 @@
 2022-07-09 18:50:28,305~DEBUG~Dumped standard scaler pickle file!
 2022-07-09 18:50:28,305~INFO~Pre-processing of raw data successful!!
 2022-07-09 18:50:28,580~INFO~Saved training and testing sets!
+2022-07-09 18:55:36,988~DEBUG~Removed irrelevant columns!
+2022-07-09 18:55:36,994~DEBUG~Dumped label encoder pickle file!
+2022-07-09 18:55:37,003~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 18:55:37,005~INFO~Pre-processing of raw data successful!!
+2022-07-09 18:55:37,314~INFO~Saved training and testing sets!
