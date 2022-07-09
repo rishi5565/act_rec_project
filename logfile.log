@@ -184,3 +184,15 @@ could not convert string to float:
 2022-07-10 00:54:22,973~INFO~Model fit successful!
 2022-07-10 00:54:23,079~INFO~Accuracy: 80.13%
 2022-07-10 00:54:23,080~INFO~Saved Scores and Parameters in respective json files.
+2022-07-10 01:02:48,393~INFO~85 files were successfully validated!
+2022-07-10 01:02:48,393~INFO~20 files failed validation tests and will not proceed further!
+2022-07-10 01:02:48,721~INFO~Created the master raw dataset!
+2022-07-10 01:02:50,327~DEBUG~Removed irrelevant columns!
+2022-07-10 01:02:50,336~DEBUG~Dumped label encoder pickle file!
+2022-07-10 01:02:50,353~DEBUG~Dumped standard scaler pickle file!
+2022-07-10 01:02:50,353~INFO~Pre-processing of raw data successful!!
+2022-07-10 01:02:50,794~INFO~Saved training and testing sets!
+2022-07-10 01:02:52,605~INFO~Fitting the Random Forest Classifier model......
+2022-07-10 01:02:55,129~INFO~Model fit successful!
+2022-07-10 01:02:55,235~INFO~Accuracy: 80.13%
+2022-07-10 01:02:55,236~INFO~Saved Scores and Parameters in respective json files.

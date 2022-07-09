@@ -35,7 +35,6 @@ def split_and_save_data(config_path):
     logger.info("Saved training and testing sets!")
 
 
-
 if __name__=="__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config", default="params.yaml")
