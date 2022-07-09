@@ -2,8 +2,6 @@ import pandas as pd
 import os
 import re
 
-from requests import head
-
 regex = r'(.*)\.csv' # the regex to validate csv files before importing
 col_name_list = ['# Columns: time', 'avg_rss12', 'var_rss12', 'avg_rss13', 'var_rss13', 'avg_rss23', 'var_rss23']
 col_dtype_list = ['int64', 'float64', 'float64', 'float64', 'float64', 'float64', 'float64']

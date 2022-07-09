@@ -30,3 +30,9 @@
 2022-07-09 14:58:45,019~INFO~85 files were successfully validated!
 2022-07-09 14:58:45,019~INFO~20 files failed validation tests and will not proceed further!
 2022-07-09 14:58:45,359~INFO~Created the master raw dataset!
+2022-07-09 15:10:02,897~INFO~85 files were successfully validated!
+2022-07-09 15:10:02,898~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 15:10:03,240~INFO~Created the master raw dataset!
+2022-07-09 17:38:41,051~INFO~Removed irrelevant columns!
+2022-07-09 17:38:41,057~INFO~Dumped label encoder pickle file!
+2022-07-09 17:38:41,070~INFO~Dumped standard scaler pickle file!

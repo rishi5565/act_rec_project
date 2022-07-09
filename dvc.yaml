@@ -10,3 +10,15 @@ stages:
     outs:
     - data/raw/master_dataset.csv
 
+  preprocess_data:
+    cmd: python src/preprocess_data.py --config=params.yaml
+    deps:
+    - src/preprocess_data.py
+    - data/raw/master_dataset.csv
+    - logger/myLogger.py
+    - src/functions.py
+    outs:
+    - saved_artifacts/std_scaler.pkl
+    - saved_artifacts/label_encoder.pkl
+    - data/processed/train_dataset.csv
+    - data/processed/test_dataset.csv

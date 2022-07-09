@@ -14,11 +14,11 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: src/functions.py
-      md5: 75c3d71b43a43d952394beb377388b28
-      size: 182
+      md5: 66ecec14856017f37050c30953c0c83e
+      size: 328
     - path: src/load_data.py
-      md5: e1543b65f43716dd73056710030f269f
-      size: 1661
+      md5: b3855f6326496eb07dd6a868d18f6c65
+      size: 1532
     outs:
     - path: data/raw/master_dataset.csv
       md5: e92812a1f060feb04a3579624a1bc2d4

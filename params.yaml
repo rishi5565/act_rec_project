@@ -9,6 +9,10 @@ data_source:
 data_paths:
   raw_dataset_csv: data/raw/master_dataset.csv
 
+preprocess:
+  cols_to_remove: ["# Columns: time"]
+
+
 split_data:
   train_path: data/processed/train_dataset.csv
   test_path: data/processed/test_dataset.csv
@@ -20,7 +24,8 @@ estimators:
       n_estimators: 200
       criterion: gini
 
-model_dir: models
+artifact_dir: saved_artifacts
+model_dir: saved_models
 
 reports:
   params: reports/params.json

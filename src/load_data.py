@@ -5,16 +5,9 @@ import argparse
 import yaml
 from logger.myLogger import getmylogger
 from data_validation.validate_data import validate_data
-from functions import log_bad_data
+from functions import log_bad_data, read_params
 
 logger = getmylogger(__name__)
-
-
-def read_params(config_path):
-    with open(config_path) as yaml_file:
-        config = yaml.safe_load(yaml_file)
-    return config
-
 
 def get_data(config_path):
     config = read_params(config_path)
