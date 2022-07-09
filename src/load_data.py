@@ -2,6 +2,7 @@ from distutils.command.config import config
 import pandas as pd
 import os
 import argparse
+from pyparsing import Regex
 import yaml
 from logger.myLogger import getmylogger
 from data_validation.validate_data import validate_data
@@ -28,7 +29,7 @@ def load_and_save_raw(config_path):
     for file in files:
         subdf = pd.read_csv(file, header=4)
         with open(file, "r") as f:
-            label = f.readline().split(" ")[-1]
+            label = str(f.readline().split(" ")[-1]).replace("\n", "")
         f.close()
         subdf["label"] = label
         df = pd.concat([df, subdf], axis=0, ignore_index=True)

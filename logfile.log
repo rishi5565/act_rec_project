@@ -112,3 +112,44 @@
 2022-07-09 20:04:42,352~INFO~Model fit successful!
 2022-07-09 20:04:42,636~INFO~Accuracy: 80.42%
 2022-07-09 20:04:42,637~INFO~Saved Scores and Parameters in respective json files.
+2022-07-09 22:20:58,509~INFO~85 files were successfully validated!
+2022-07-09 22:20:58,509~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:20:58,836~INFO~Created the master raw dataset!
+2022-07-09 22:21:00,306~DEBUG~Removed irrelevant columns!
+2022-07-09 22:21:00,312~DEBUG~Dumped label encoder pickle file!
+2022-07-09 22:21:00,321~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 22:21:00,322~INFO~Pre-processing of raw data successful!!
+2022-07-09 22:21:00,703~INFO~Saved training and testing sets!
+2022-07-09 22:22:36,034~INFO~85 files were successfully validated!
+2022-07-09 22:22:36,035~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:22:36,360~INFO~Created the master raw dataset!
+2022-07-09 22:22:37,855~DEBUG~Removed irrelevant columns!
+2022-07-09 22:22:37,872~DEBUG~Dumped label encoder pickle file!
+2022-07-09 22:22:37,881~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 22:22:37,882~INFO~Pre-processing of raw data successful!!
+2022-07-09 22:22:38,194~INFO~Saved training and testing sets!
+2022-07-09 22:25:43,487~INFO~85 files were successfully validated!
+2022-07-09 22:25:43,487~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:25:56,865~INFO~85 files were successfully validated!
+2022-07-09 22:25:56,865~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:27:22,680~INFO~85 files were successfully validated!
+2022-07-09 22:27:22,681~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:27:23,073~INFO~Created the master raw dataset!
+2022-07-09 22:28:07,346~INFO~85 files were successfully validated!
+2022-07-09 22:28:07,346~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:28:07,738~INFO~Created the master raw dataset!
+2022-07-09 22:29:48,721~INFO~85 files were successfully validated!
+2022-07-09 22:29:48,722~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:29:49,092~INFO~Created the master raw dataset!
+2022-07-09 22:34:03,692~INFO~85 files were successfully validated!
+2022-07-09 22:34:03,692~INFO~20 files failed validation tests and will not proceed further!
+2022-07-09 22:34:04,037~INFO~Created the master raw dataset!
+2022-07-09 22:36:07,077~DEBUG~Removed irrelevant columns!
+2022-07-09 22:36:07,083~DEBUG~Dumped label encoder pickle file!
+2022-07-09 22:36:07,091~DEBUG~Dumped standard scaler pickle file!
+2022-07-09 22:36:07,091~INFO~Pre-processing of raw data successful!!
+2022-07-09 22:36:07,358~INFO~Saved training and testing sets!
+2022-07-09 22:36:09,392~INFO~Fitting the Random Forest Classifier model......
+2022-07-09 22:36:14,924~INFO~Model fit successful!
+2022-07-09 22:36:15,203~INFO~Accuracy: 80.42%
+2022-07-09 22:36:15,204~INFO~Saved Scores and Parameters in respective json files.

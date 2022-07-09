@@ -1,7 +1,5 @@
-
 import os
 import pandas as pd
-import numpy as np
 from sklearn.metrics import roc_auc_score, accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from functions import read_params
