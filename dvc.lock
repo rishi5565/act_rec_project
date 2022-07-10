@@ -13,6 +13,9 @@ stages:
     - path: logger/myLogger.py
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
+    - path: params.yaml
+      md5: 8406e24392f737095f2f77295b3217d0
+      size: 1036
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
@@ -32,6 +35,9 @@ stages:
     - path: logger/myLogger.py
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
+    - path: params.yaml
+      md5: 8406e24392f737095f2f77295b3217d0
+      size: 1036
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
@@ -66,23 +72,21 @@ stages:
     - path: logger/myLogger.py
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
+    - path: params.yaml
+      md5: 8406e24392f737095f2f77295b3217d0
+      size: 1036
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
     - path: src/train_and_eval.py
-      md5: 9a106fb2884075bdc121a58afbd1f73b
-      size: 2712
-    params:
-      params.yaml:
-        estimators.RandomForestClassifier.params.criterion: entropy
-        estimators.RandomForestClassifier.params.n_estimators: 75
-    outs:
-    - path: reports/params.json
-      md5: 2e6b9054fa582a27958ae9f4edf1a203
-      size: 57
-    - path: reports/scores.json
-      md5: f10510cbf5914d248223640e411b7494
-      size: 40
-    - path: saved_models/rfc_model.pkl
-      md5: 2331334758808b4d926b1dee211f5bf0
-      size: 92898168
+      md5: deed5ec03431cd5fbc7edef78255471e
+      size: 3476
+  log_production_model:
+    cmd: python src/log_production_model.py --config=params.yaml
+    deps:
+    - path: params.yaml
+      md5: 8406e24392f737095f2f77295b3217d0
+      size: 1036
+    - path: src/log_production_model.py
+      md5: acb761ec837609c67a6d1b44e7aff02b
+      size: 1851

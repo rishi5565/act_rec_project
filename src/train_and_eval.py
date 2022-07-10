@@ -6,7 +6,8 @@ from functions import read_params
 import argparse
 import pickle
 from logger.myLogger import getmylogger
-import json
+import mlflow
+from urllib.parse import urlparse
 
 logger = getmylogger(__name__)
 
@@ -23,7 +24,7 @@ def train_and_evaluate(config_path):
     train_data_path = config["split_data"]["train_path"]
     random_state = config["base"]["random_state"]
     algorithm_name = config["algorithm_name"]
-    model_dir = config["model_dir"]
+    model_dir = config["production_model_dir"]
 
     n_estimators = config["estimators"]["RandomForestClassifier"]["params"]["n_estimators"]
     criterion = config["estimators"]["RandomForestClassifier"]["params"]["criterion"]
@@ -39,43 +40,56 @@ def train_and_evaluate(config_path):
     train_x = train.drop(target, axis=1)
     test_x = test.drop(target, axis=1)
 
-    rfc_model = RandomForestClassifier(
-                n_estimators=n_estimators, 
-                criterion=criterion,
-                random_state=random_state)
-    logger.info(f"Fitting the {algorithm_name} model......")
-    rfc_model.fit(train_x, train_y)
-    logger.info("Model fit successful!")
+    ############# MLFLOW ##############
 
-    prediction = rfc_model.predict(test_x)
+    mlflow_config = config["mlflow_config"]
+    remote_server_uri = mlflow_config["remote_server_uri"]
+    experiment_name = mlflow_config["experiment_name"]
+    run_name = mlflow_config["run_name"]
 
-    acc_score = eval_metrics(test_y, prediction)
-    # logger.info(f"ROC AUC: {round(roc_score*100, 2)}%")
-    logger.info(f"Accuracy: {round(acc_score*100, 2)}%")
+    mlflow.set_tracking_uri(remote_server_uri)
+    mlflow.set_experiment(experiment_name)
 
+    with mlflow.start_run(run_name=run_name):
+        rfc_model = RandomForestClassifier(
+                    n_estimators=n_estimators, 
+                    criterion=criterion,
+                    random_state=random_state)
+        logger.info(f"Fitting the {algorithm_name} model......")
+        rfc_model.fit(train_x, train_y)
+        logger.info("Model fit successful!")
 
-    scores_file = config["reports"]["scores"]
-    params_file = config["reports"]["params"]
+        prediction = rfc_model.predict(test_x)
 
-    with open(scores_file, "w") as f:
-        scores = {
-            # "ROC AUC": roc_score,
-            "Accuracy": acc_score}
-        json.dump(scores, f, indent=4)
+        acc_score = eval_metrics(test_y, prediction)
+        # logger.info(f"ROC AUC: {round(roc_score*100, 2)}%")
+        logger.info(f"Accuracy: {round(acc_score*100, 2)}%")
 
-    with open(params_file, "w") as f:
-        params = {
-            "n_estimators": n_estimators,
-            "criterion": criterion}
-        json.dump(params, f, indent=4)
-    logger.info("Saved Scores and Parameters in respective json files.")
+        mlflow.log_param("n_estimators", n_estimators)
+        mlflow.log_param("criterion", criterion)
 
-    if not os.path.exists(model_dir):
-        os.mkdir(model_dir)
-    model_path = os.path.join(model_dir, "rfc_model.pkl")
+        mlflow.log_metric("Accuracy", acc_score)
 
-    with open(model_path, "wb") as f:
-        pickle.dump(rfc_model, f)
+        registered_model_name = mlflow_config["registered_model_name"]
+        tracking_url_type_store = urlparse(mlflow.get_artifact_uri()).scheme
+        if tracking_url_type_store != "file":
+            mlflow.sklearn.log_model(rfc_model, 
+                                    "RFC_model", 
+                                    registered_model_name=registered_model_name)
+        else:
+            mlflow.sklearn.load_model(rfc_model, "RFC_model")
+
+        # cmd run:
+        # --backend-store-uri sqlite://mlflow.db
+        # --default-artifact-root ./mlflow_artifacts
+        # --host 0.0.0.0 -p 1234
+
+        # if not os.path.exists(model_dir):
+        #     os.mkdir(model_dir)
+        # model_path = os.path.join(model_dir, "rfc_model.pkl")
+
+        # with open(model_path, "wb") as f:
+        #     pickle.dump(rfc_model, f)
 
 
 

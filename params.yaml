@@ -24,16 +24,27 @@ algorithm_name:
 estimators:
   RandomForestClassifier:
     params:
-      n_estimators: 75
-      criterion: entropy
+      n_estimators: 15
+      criterion: gini
 
 artifact_dir: saved_artifacts
-model_dir: saved_models
+production_model_dir: production_model
 
 reports:
   params: reports/params.json
   scores: reports/scores.json
 
-webapp_model: saved_models/rfc_model.pkl
 scaler: saved_artifacts/std_scaler.pkl
 label_encoder: saved_artifacts/label_encoder.pkl
+
+webapp_model: production_model/rfc_model.pkl
+
+mlflow_config:
+  artifact_dir: mlflow_artifacts
+  experiment_name: Random Forest Classification
+  run_name: mlops
+  registered_model_name: RandomForestClassifier
+  remote_server_uri: http://127.5.5.5:1234
+
+
+

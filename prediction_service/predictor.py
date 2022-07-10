@@ -22,4 +22,4 @@ def get_prediction(avgrss12, varrss12, avgrss13, varrss13, avgrss23, varrss23):
     raw_pred = rfc_model.predict(trf_input)
     trf_pred = label_encoder.inverse_transform(raw_pred)[0]
 
-    return trf_pred
+    return trf_pred # sends the activity name as a string

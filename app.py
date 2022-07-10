@@ -27,7 +27,7 @@ def prediction():
         varrss23 = request.form["varrss23"]
 
         try:
-            pred = get_prediction(avgrss12, varrss12, avgrss13, varrss13, avgrss23, varrss23) # returns string
+            pred = get_prediction(avgrss12, varrss12, avgrss13, varrss13, avgrss23, varrss23) # returns activity name as string
             logger.info("Prediction Fetched!")
             response = f"The activity is {pred}."
             return render_template("index.html", response=response)

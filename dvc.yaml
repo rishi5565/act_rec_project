@@ -7,6 +7,7 @@ stages:
     - data_validation/validate_data.py
     - logger/myLogger.py
     - data/external/
+    - params.yaml
     outs:
     - data/raw/master_dataset.csv
 
@@ -18,6 +19,7 @@ stages:
     - logger/myLogger.py
     - src/functions.py
     - src/preprocess_functions.py
+    - params.yaml
     outs:
     - saved_artifacts/std_scaler.pkl
     - saved_artifacts/label_encoder.pkl
@@ -32,14 +34,23 @@ stages:
     - src/functions.py
     - data/processed/train_dataset.csv
     - data/processed/test_dataset.csv
-    params:
-    - estimators.RandomForestClassifier.params.n_estimators
-    - estimators.RandomForestClassifier.params.criterion
-    metrics:
-    - reports/params.json:
-        cache: false
-    - reports/scores.json:
-        cache: false
-    outs:
-    - saved_models/rfc_model.pkl
+    - params.yaml
+    # params:
+    # - estimators.RandomForestClassifier.params.n_estimators
+    # - estimators.RandomForestClassifier.params.criterion
+    # metrics:
+    # - reports/params.json:
+    #     cache: false
+    # - reports/scores.json:
+    #     cache: false
+    # outs:
+    # - production_model/rfc_model.pkl
+  
+  log_production_model:
+    cmd: python src/log_production_model.py --config=params.yaml
+    deps:
+      - src/log_production_model.py
+      - params.yaml
+
+    
 
