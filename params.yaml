@@ -24,9 +24,9 @@ algorithm_name:
 estimators:
   RandomForestClassifier:
     params:
-      n_estimators: 15
+      n_estimators: 50
       criterion: gini
-
+ 
 artifact_dir: saved_artifacts
 production_model_dir: production_model
 

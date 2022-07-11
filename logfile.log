@@ -233,3 +233,122 @@ could not convert string to float:
 2022-07-10 19:34:57,238~INFO~Fitting the Random Forest Classifier model......
 2022-07-10 19:34:57,671~INFO~Model fit successful!
 2022-07-10 19:34:57,697~INFO~Accuracy: 79.64%
+2022-07-11 18:59:26,976~INFO~85 files were successfully validated!
+2022-07-11 18:59:26,978~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 18:59:27,319~INFO~Created the master raw dataset!
+2022-07-11 18:59:28,809~DEBUG~Removed irrelevant columns!
+2022-07-11 18:59:28,817~DEBUG~Dumped label encoder pickle file!
+2022-07-11 18:59:28,830~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 18:59:28,831~INFO~Pre-processing of raw data successful!!
+2022-07-11 18:59:29,215~INFO~Saved training and testing sets!
+2022-07-11 19:03:13,739~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:03:14,172~INFO~Model fit successful!
+2022-07-11 19:03:14,198~INFO~Accuracy: 79.64%
+2022-07-11 19:05:48,063~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:05:48,519~INFO~Model fit successful!
+2022-07-11 19:05:48,544~INFO~Accuracy: 79.64%
+2022-07-11 19:18:51,859~INFO~85 files were successfully validated!
+2022-07-11 19:18:51,860~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 19:18:52,213~INFO~Created the master raw dataset!
+2022-07-11 19:18:53,820~DEBUG~Removed irrelevant columns!
+2022-07-11 19:18:53,832~DEBUG~Dumped label encoder pickle file!
+2022-07-11 19:18:53,851~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 19:18:53,854~INFO~Pre-processing of raw data successful!!
+2022-07-11 19:18:54,266~INFO~Saved training and testing sets!
+2022-07-11 19:18:57,012~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:19:08,017~INFO~Model fit successful!
+2022-07-11 19:19:08,585~INFO~Accuracy: 80.58%
+2022-07-11 19:21:42,895~INFO~85 files were successfully validated!
+2022-07-11 19:21:42,895~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 19:21:43,213~INFO~Created the master raw dataset!
+2022-07-11 19:21:44,835~DEBUG~Removed irrelevant columns!
+2022-07-11 19:21:44,872~DEBUG~Dumped label encoder pickle file!
+2022-07-11 19:21:44,882~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 19:21:44,899~INFO~Pre-processing of raw data successful!!
+2022-07-11 19:21:45,310~INFO~Saved training and testing sets!
+2022-07-11 19:21:48,008~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:21:48,074~INFO~Model fit successful!
+2022-07-11 19:21:48,079~INFO~Accuracy: 71.25%
+2022-07-11 19:28:29,264~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:28:29,328~INFO~Model fit successful!
+2022-07-11 19:28:29,333~INFO~Accuracy: 71.25%
+2022-07-11 19:30:40,752~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:30:40,818~INFO~Model fit successful!
+2022-07-11 19:30:40,824~INFO~Accuracy: 71.25%
+2022-07-11 19:31:51,658~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:31:51,727~INFO~Model fit successful!
+2022-07-11 19:31:51,735~INFO~Accuracy: 71.25%
+2022-07-11 19:34:11,222~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:34:11,303~INFO~Model fit successful!
+2022-07-11 19:34:11,317~INFO~Accuracy: 71.25%
+2022-07-11 19:38:10,650~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:38:10,719~INFO~Model fit successful!
+2022-07-11 19:38:10,728~INFO~Accuracy: 71.25%
+2022-07-11 19:39:36,810~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:39:36,894~INFO~Model fit successful!
+2022-07-11 19:39:36,901~INFO~Accuracy: 71.25%
+2022-07-11 19:41:49,896~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:41:49,970~INFO~Model fit successful!
+2022-07-11 19:41:49,979~INFO~Accuracy: 71.25%
+2022-07-11 19:52:33,719~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:52:33,792~INFO~Model fit successful!
+2022-07-11 19:52:33,802~INFO~Accuracy: 71.25%
+2022-07-11 19:53:12,350~INFO~Model is in staging.
+2022-07-11 19:54:09,746~INFO~Model is in staging.
+2022-07-11 19:54:23,646~INFO~Model is in staging.
+2022-07-11 19:54:36,519~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 19:54:36,608~INFO~Model fit successful!
+2022-07-11 19:54:36,613~INFO~Accuracy: 71.25%
+2022-07-11 19:54:39,474~INFO~Model is in staging.
+2022-07-11 19:54:39,496~INFO~Model is in staging.
+2022-07-11 19:54:39,520~INFO~Model is in staging.
+2022-07-11 19:54:39,547~INFO~Model is in staging.
+2022-07-11 19:54:39,578~INFO~Model is in staging.
+2022-07-11 19:54:39,605~INFO~Best metrics achieved, transfering model to production!!
+2022-07-11 19:54:39,631~INFO~Model is in staging.
+2022-07-11 19:54:39,654~INFO~Model is in staging.
+2022-07-11 19:54:39,676~INFO~Model is in staging.
+2022-07-11 19:54:39,697~INFO~Model is in staging.
+2022-07-11 19:54:39,720~INFO~Model is in staging.
+2022-07-11 19:54:39,743~INFO~Model is in staging.
+2022-07-11 19:54:39,767~INFO~Model is in staging.
+2022-07-11 19:54:39,792~INFO~Model is in staging.
+2022-07-11 19:54:39,822~INFO~Model is in staging.
+2022-07-11 19:54:39,846~INFO~Model is in staging.
+2022-07-11 19:54:41,124~INFO~Best model dumped for production!
+2022-07-11 20:00:00,783~INFO~85 files were successfully validated!
+2022-07-11 20:00:00,783~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 20:00:01,136~INFO~Created the master raw dataset!
+2022-07-11 20:00:02,629~DEBUG~Removed irrelevant columns!
+2022-07-11 20:00:02,639~DEBUG~Dumped label encoder pickle file!
+2022-07-11 20:00:02,699~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 20:00:02,701~INFO~Pre-processing of raw data successful!!
+2022-07-11 20:00:03,042~INFO~Saved training and testing sets!
+2022-07-11 20:00:05,724~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 20:00:05,765~INFO~Model fit successful!
+2022-07-11 20:00:05,771~INFO~Accuracy: 72.39%
+2022-07-11 20:00:09,432~INFO~Searched and dumped the best model for production!
+2022-07-11 20:01:16,314~INFO~85 files were successfully validated!
+2022-07-11 20:01:16,315~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 20:01:16,667~INFO~Created the master raw dataset!
+2022-07-11 20:01:18,223~DEBUG~Removed irrelevant columns!
+2022-07-11 20:01:18,233~DEBUG~Dumped label encoder pickle file!
+2022-07-11 20:01:18,248~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 20:01:18,249~INFO~Pre-processing of raw data successful!!
+2022-07-11 20:01:18,710~INFO~Saved training and testing sets!
+2022-07-11 20:01:21,733~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 20:01:49,670~INFO~Model fit successful!
+2022-07-11 20:01:51,141~INFO~Accuracy: 80.62%
+2022-07-11 20:02:02,710~INFO~Searched and dumped the best model for production!
+2022-07-11 20:15:39,132~INFO~85 files were successfully validated!
+2022-07-11 20:15:39,133~INFO~20 files failed validation tests and will not proceed further!
+2022-07-11 20:15:39,452~INFO~Created the master raw dataset!
+2022-07-11 20:15:41,247~DEBUG~Removed irrelevant columns!
+2022-07-11 20:15:41,260~DEBUG~Dumped label encoder pickle file!
+2022-07-11 20:15:41,275~DEBUG~Dumped standard scaler pickle file!
+2022-07-11 20:15:41,290~INFO~Pre-processing of raw data successful!!
+2022-07-11 20:15:41,722~INFO~Saved training and testing sets!
+2022-07-11 20:15:44,682~INFO~Fitting the Random Forest Classifier model......
+2022-07-11 20:15:46,033~INFO~Model fit successful!
+2022-07-11 20:15:46,106~INFO~Accuracy: 80.02%
+2022-07-11 20:15:48,955~INFO~Searched and dumped the best model for production!

@@ -14,8 +14,8 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 8406e24392f737095f2f77295b3217d0
-      size: 1036
+      md5: e45d61d1223c3ad9996ae2a255c2563d
+      size: 1037
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
@@ -36,8 +36,8 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 8406e24392f737095f2f77295b3217d0
-      size: 1036
+      md5: e45d61d1223c3ad9996ae2a255c2563d
+      size: 1037
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
@@ -73,20 +73,45 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 8406e24392f737095f2f77295b3217d0
+      md5: 86d5750f8cf5c15a050e6640b304c5f9
       size: 1036
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
     - path: src/train_and_eval.py
-      md5: deed5ec03431cd5fbc7edef78255471e
-      size: 3476
+      md5: da05720d2b50543186ee61b93139d1e2
+      size: 3475
   log_production_model:
     cmd: python src/log_production_model.py --config=params.yaml
     deps:
     - path: params.yaml
-      md5: 8406e24392f737095f2f77295b3217d0
+      md5: 86d5750f8cf5c15a050e6640b304c5f9
       size: 1036
     - path: src/log_production_model.py
-      md5: acb761ec837609c67a6d1b44e7aff02b
-      size: 1851
+      md5: afedf0944f56a142bfcfdc87f50ba3bb
+      size: 1837
+  train_and_productionize:
+    cmd: python src/train_and_prod.py --config=params.yaml
+    deps:
+    - path: data/processed/test_dataset.csv
+      md5: 808960c9e13a658f86fb5a62c201bbd3
+      size: 986785
+    - path: data/processed/train_dataset.csv
+      md5: 2d6c24460d4cabfcc1d9e2220fd1d00a
+      size: 3946178
+    - path: logger/myLogger.py
+      md5: 961c81f55fc6e970cb9c246f718eed46
+      size: 669
+    - path: params.yaml
+      md5: e45d61d1223c3ad9996ae2a255c2563d
+      size: 1037
+    - path: src/functions.py
+      md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
+      size: 330
+    - path: src/train_and_prod.py
+      md5: 2b2593c6467a99a190e11b0bd2bd8ac3
+      size: 4086
+    outs:
+    - path: production_model/rfc_model.pkl
+      md5: 0cba50141044a332c56d8a11d6a2e8b6
+      size: 63676039

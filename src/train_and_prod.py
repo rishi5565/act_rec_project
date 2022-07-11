@@ -1,4 +1,4 @@
-import os
+
 import pandas as pd
 from sklearn.metrics import roc_auc_score, accuracy_score
 from sklearn.ensemble import RandomForestClassifier
@@ -8,6 +8,7 @@ import pickle
 from logger.myLogger import getmylogger
 import mlflow
 from urllib.parse import urlparse
+from mlflow.tracking import MlflowClient
 
 logger = getmylogger(__name__)
 
@@ -71,25 +72,43 @@ def train_and_evaluate(config_path):
         mlflow.log_metric("Accuracy", acc_score)
 
         registered_model_name = mlflow_config["registered_model_name"]
-        tracking_url_type_store = urlparse(mlflow.get_artifact_uri()).scheme
-        if tracking_url_type_store != "file":
-            mlflow.sklearn.log_model(rfc_model, 
+
+        mlflow.sklearn.log_model(rfc_model, 
                                     "RFC_model", 
                                     registered_model_name=registered_model_name)
+
+    runs = mlflow.search_runs(experiment_names=[experiment_name])
+
+    max_acc_index = runs["metrics.Accuracy"].sort_values(ascending=False)[0:1].index
+    max_run_id = runs.loc[max_acc_index]["run_id"].values
+
+    client = MlflowClient()
+    for mv in client.search_model_versions(f"name='{registered_model_name}'"):
+        mv = dict(mv)
+
+        if mv["run_id"] == max_run_id:
+            current_version = mv["version"]
+            logged_model = mv["source"]
+            client.transition_model_version_stage(
+                name = registered_model_name,
+                version=current_version,
+                stage="Production"
+            )
+
         else:
-            mlflow.sklearn.load_model(rfc_model, "RFC_model")
+            current_version = mv["version"]
+            client.transition_model_version_stage(
+                name = registered_model_name,
+                version=current_version,
+                stage="Staging"
+            )
 
-        # cmd run:
-        # --backend-store-uri sqlite://mlflow.db
-        # --default-artifact-root ./mlflow_artifacts
-        # --host 0.0.0.0 -p 1234
+    loaded_model = mlflow.pyfunc.load_model(logged_model)
+    model_path = config["webapp_model"]
 
-        # if not os.path.exists(model_dir):
-        #     os.mkdir(model_dir)
-        # model_path = os.path.join(model_dir, "rfc_model.pkl")
-
-        # with open(model_path, "wb") as f:
-        #     pickle.dump(rfc_model, f)
+    with open(model_path, "wb") as f:
+        pickle.dump(loaded_model, f)
+        logger.info("Searched and dumped the best model for production!")
 
 
 
