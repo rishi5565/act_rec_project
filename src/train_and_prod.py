@@ -25,7 +25,6 @@ def train_and_evaluate(config_path):
     train_data_path = config["split_data"]["train_path"]
     random_state = config["base"]["random_state"]
     algorithm_name = config["algorithm_name"]
-    model_dir = config["production_model_dir"]
 
     n_estimators = config["estimators"]["RandomForestClassifier"]["params"]["n_estimators"]
     criterion = config["estimators"]["RandomForestClassifier"]["params"]["criterion"]
