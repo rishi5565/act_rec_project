@@ -21,8 +21,6 @@ stages:
     - src/preprocess_functions.py
     - params.yaml
     outs:
-    - saved_artifacts/std_scaler.pkl
-    - saved_artifacts/label_encoder.pkl
     - data/processed/train_dataset.csv
     - data/processed/test_dataset.csv
 
