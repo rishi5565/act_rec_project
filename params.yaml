@@ -24,7 +24,7 @@ algorithm_name:
 estimators:
   RandomForestClassifier:
     params:
-      n_estimators: 50
+      n_estimators: 51
       criterion: gini
  
 artifact_dir: saved_artifacts

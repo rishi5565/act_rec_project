@@ -14,7 +14,7 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: e45d61d1223c3ad9996ae2a255c2563d
+      md5: 31b544a33b1f76de1347bcf8947717b4
       size: 1037
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
@@ -36,7 +36,7 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: e45d61d1223c3ad9996ae2a255c2563d
+      md5: 31b544a33b1f76de1347bcf8947717b4
       size: 1037
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
@@ -103,15 +103,11 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: e45d61d1223c3ad9996ae2a255c2563d
+      md5: 31b544a33b1f76de1347bcf8947717b4
       size: 1037
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
     - path: src/train_and_prod.py
-      md5: 2b2593c6467a99a190e11b0bd2bd8ac3
-      size: 4086
-    outs:
-    - path: production_model/rfc_model.pkl
-      md5: 0cba50141044a332c56d8a11d6a2e8b6
-      size: 63676039
+      md5: 607ac88e0dde269a77273715e3e4bd3d
+      size: 4038

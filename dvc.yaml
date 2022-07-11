@@ -35,6 +35,4 @@ stages:
     - data/processed/train_dataset.csv
     - data/processed/test_dataset.csv
     - params.yaml
-    outs: 
-    - production_model/rfc_model.pkl
   
