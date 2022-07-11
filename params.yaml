@@ -12,6 +12,8 @@ data_paths:
 preprocess:
   cols_to_remove: ["# Columns: time"]
 
+features_schema_path: tests/features_schema.json
+
 
 split_data:
   train_path: data/processed/train_dataset.csv

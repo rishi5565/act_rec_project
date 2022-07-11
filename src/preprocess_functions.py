@@ -14,10 +14,9 @@ class preprocess_data:
         self.df = pd.read_csv(self.raw_path)
 
 
-    def remove_useless_cols(self, cols_to_remove):
+    def remove_cols(self, cols_to_remove):
         self.df.drop(cols_to_remove, axis=1, inplace=True)
         logger.debug("Removed irrelevant columns!")
-
 
 
     def label_encode(self, target_col, artifact_dir):

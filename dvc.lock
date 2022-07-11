@@ -14,8 +14,8 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 31b544a33b1f76de1347bcf8947717b4
-      size: 1037
+      md5: 6748bb63ebbfec654d152c1b83ca23a7
+      size: 1089
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
@@ -36,17 +36,17 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 31b544a33b1f76de1347bcf8947717b4
-      size: 1037
+      md5: 6748bb63ebbfec654d152c1b83ca23a7
+      size: 1089
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
     - path: src/preprocess_data.py
-      md5: b5d3c1698920eb2651f5081f8b5067f3
-      size: 1627
+      md5: ddfba4a0be6e6fafbee1f6c5c5785791
+      size: 2063
     - path: src/preprocess_functions.py
-      md5: 58e4e43397e62c9ccf821027d79a39ca
-      size: 1530
+      md5: ee6e6ddf1c4bcada9bb42196e020dfd1
+      size: 1520
     outs:
     - path: data/processed/test_dataset.csv
       md5: 808960c9e13a658f86fb5a62c201bbd3
@@ -54,12 +54,6 @@ stages:
     - path: data/processed/train_dataset.csv
       md5: 2d6c24460d4cabfcc1d9e2220fd1d00a
       size: 3946178
-    - path: saved_artifacts/label_encoder.pkl
-      md5: 5eae31063b5bf54611da4231caf7e80d
-      size: 358
-    - path: saved_artifacts/std_scaler.pkl
-      md5: 455462f7ce75ca9d82b67fa9731ce41d
-      size: 883
   train_and_evaluate:
     cmd: python src/train_and_eval.py --config=params.yaml
     deps:
@@ -103,8 +97,8 @@ stages:
       md5: 961c81f55fc6e970cb9c246f718eed46
       size: 669
     - path: params.yaml
-      md5: 31b544a33b1f76de1347bcf8947717b4
-      size: 1037
+      md5: 6748bb63ebbfec654d152c1b83ca23a7
+      size: 1089
     - path: src/functions.py
       md5: ca2a0aa789d0ef3fcc9f6b579c60eee0
       size: 330
