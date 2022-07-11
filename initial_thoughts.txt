@@ -1,0 +1,42 @@
+Validation of Data from remote location as per DSA:
+
+- check the filename using a regex
+- if ok, we read using pandas, label name as dir name,
+- if exception, we log the file as bad data
+- if read done, we verify column names
+- we verify column data types
+- we verify nulls, reject datasets with nulls
+- add the labels
+-process label names using a custom string function
+
+trf all valid files to interim, bad data logged
+
+in interim:
+- concat all the files and trf the master dataset to raw
+
+in raw:
+- remove useless cols
+- std scale
+- label encode target
+- split train test and trf to processed
+
+from processed:
+- train and evaluate (just do 1 logistic regression now, later add multiple models)
+- save the metrics and parameters
+- save the model
+
+create flask api and test using postman
+- exception handling for out of range values # later do it
+
+go back and integerate mlflow in the pipeline
+
+mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlflow_artifacts --host 127.5.5.5 -p 1234
+
+
+add the webpages, html, css
+
+automate the CI pipeline on github
+
+push to heroku
+
+experiment with multiple models now and keeping track??
