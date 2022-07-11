@@ -1,7 +1,9 @@
-numpy
 pandas
 scikit_learn
 dvc
 dvc[gdrive]
 flask
 mlflow
+tox
+pytest
+flake8
